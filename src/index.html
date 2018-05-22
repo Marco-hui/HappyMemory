@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--适应手机版-->
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+ <title>美好记忆</title>
+</head>
+<link rel="stylesheet" href="css/style.css" />
+<body>
+	<div class="content">
+    	<div class="page page1">
+    		<img src="img/wechat/indexBuilding.png" class="page1_b"/>
+    		<img src="img/wechat/indexFlight.png" class="page1_p"/>
+    		<img src="img/wechat/indexTxt.png" class="page1_t"/>
+    		<img src="img/wechat/indexFlowers01.png" class="page1_f1"/>
+    		<img src="img/wechat/indexFlowers02.png" class="page1_f2"/>
+    		<img src="img/wechat/indexCloud.png" class="page1_c"/>
+    		<img src="img/wechat/indexElements.png" class="page1_e"/>
+    		<img src="img/wechat/indexStars.png" class="page1_s"/>
+    	</div>
+    	<div class="page page2">
+    		<img src="img/wechat/wasBg.jpg" class="page2_bg">
+    		<img src="img/wechat/wasFarm.png" class="page2_f"/>
+    		<img src="img/wechat/wasIT.png" class="page2_it"/>
+    		<img src="img/wechat/cornerTitle.png" class="page2_ct"/>
+    	</div>
+    	<div class="page page3">
+    		<!--场景1-->
+    		<img src="img/wechat/earlyBg.jpg" class="page3_earlyBg"/>
+    		<img src="img/wechat/lastBusStation.png" class="page3_lBS"/>
+    		<img src="img/wechat/lastBusAvatar.png" class="page3_person"/>
+    		<img src="img/wechat/bus.png"/ class="page3_bus">
+    		<img src="img/wechat/earlyTitle.png" class="page3_earlytit"/>
+    		<img src="img/wechat/lastBusTitle.png" class="page3_lBtit"/>
+    		<!--场景2-->
+    		<img src="img/wechat/myTeamSpace.png" class="page3_myTSpace"/>
+    		<img src="img/wechat/myteamWhereTxt.png" class="page3_myTWhere"/>
+    		<img src="img/wechat/myTeamAvatar.png" class="page3_myTAvatar"/>
+    		<img src="img/wechat/myTeamWall.png" class="page3_myTWall"/>
+    	</div>
+    	<div class="page page4">
+    		<!--场景1-->
+    		<img src="img/wechat/lightOffBg.jpg" class="page4_ofB"/>
+    		<img src="img/wechat/lightOff.png" class="page4_lO" onclick="beat(this)"/>
+    		<img src="img/wechat/cornerTitle.png" class="page4_tit"/>
+    		<img src="img/wechat/clickGuide.png" class="page4_gui"/>
+    		<!--场景2-->
+    		<img src="img/wechat/lightOnBg.jpg" class="page4_onB"/>
+    		<img src="img/wechat/weKnowYou.png" class="page4_tit1"/>
+    	</div>
+    	<div class="page page5">
+    		
+    	</div>
+    </div>
+    
+    <img src="img/wechat/arrow-up.png" class="arrow"/>
+    <!--音乐播放器   autoplay自动播放  controls上一首下一首按钮-->
+    <audio id="player" src="img/wechat/music.mp3" autoplay="autoplay"></audio>
+    <img src="img/wechat/musicBtn.png" class="playMusic  musicRotate" onclick="playMyMusic(this)"/>
+</body>
+<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+<!--jquery.touchSwipe.min.js要放到两者之间  触控设置源文件-->
+<script src="js/jquery.touchSwipe.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+</html>

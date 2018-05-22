@@ -1,0 +1,337 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.content{
+	/*不在这里设置宽高，在main.js里设置，下面page同样*/
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.page{
+	/*相对定位即可*/
+	position: relative;
+}
+
+.page1{
+	background-color: turquoise;
+}
+
+.page2{
+	background-color: darkkhaki;
+}
+
+.page3{
+	background-color: darksalmon;
+}
+
+.page4{
+	background-color: gold;
+}
+
+.page5{
+	background-color: darkmagenta;
+}
+
+/***************page1**********************/
+.page1 img{
+	/*设置绝对定位，让每张图片互不影响*/
+	position: absolute;
+}
+
+.page1_b{
+	width: 100%;
+	height: 30%;
+	left: 0;
+	bottom: 0;
+	/*层级  99代表最高级*/
+	z-index:99;
+	display: none;
+}
+
+.page1_p{
+	width: 0%;
+	height: 0%;
+	left: 20%;
+	top: 60%;
+	/*linear线性变换  匀速*/
+	animation: page1_scale 1.5s infinite linear;
+}
+
+.page1_t{
+	width: 70%;
+	left: 15%;
+	top: 10%;
+}
+
+.page1_f1{
+	width: 15%;
+	left: 15%;
+	top: 10%;
+	transform-origin: bottom center;
+	animation: page1_rotate 1.5s infinite linear;
+}
+
+.page1_f2{
+	width: 15%;
+	height: 15%;
+	left: 25%;
+	top: 30%;
+	transform-origin: bottom center;
+	animation: page1_rotate 1.5s infinite linear;
+}
+
+@keyframes page1_rotate{
+	0%{}
+	25%{transform: rotate(30deg);}
+	50%{}
+	75%{transform: rotate(-30deg);}
+	100%{}
+}
+
+/*两个类有相同属性，这种写法在标签少的情况下可以酌情使用*/
+.page1_c,.page1_e,.page1_s{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	/*css动画属性 animation
+	 page1_scale动画名  1s动画时间
+	 默认动画执行次数为1次，3次则写“3”，无限循环则为 infinite
+	 both定格在动画结束状态*/
+	animation: page1_scale 1.5s infinite;
+}
+
+/*执行动画  （name）动画名 */
+/*fron{}动画起止状态       to{}动画结束状态*/
+
+/*@keyframes page1_scale{
+	from{}
+	to{transform: scale(0.9);}
+}*/
+
+/*0%代表起始状态  50%中间状态  100%代表最终状态
+ 任何时候状态下跟最开始设置的状态一致 都可以省略不写*/
+@keyframes page1_scale{
+	0%{}
+	50%{transform: scale(0.9);}
+	100%{}
+}
+
+/***************page2**********************/
+.page2 img{
+	position: absolute;
+}
+
+.page2_bg{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.page2_f{
+	/*height: auto;*/
+	width: 65%;
+	top: 20%;
+	left: 5%;
+	display: none;
+}
+
+.page2_it{
+	width: 80%;
+	top: 70%;
+	right: 10%;
+	display: none;
+}
+
+.page2_ct{
+	width: 70%;
+	top: 45%;
+	right: 0;
+	display: none;
+}
+
+/***************page3**********************/
+.page3 img{
+	position: absolute;
+}
+
+.page3_earlyBg{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	
+}
+
+.page3_lBS{
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	
+	/*display: none;*/
+}
+
+.page3_bus{
+	width:43%;
+	height: 20%;
+	bottom: 9%;
+	left: 0;
+	animation: busmove 1s;
+	
+	/*display: none;*/
+}
+@keyframes busmove{
+	from{}
+	to{transform: translate(-50%);}
+}
+
+.page3_person{
+	width:30%;
+	bottom: 10%;
+	right: 5%;
+	animation: personmove 2s;
+	/*display: none;*/
+}
+@keyframes personmove{
+	from{}
+	to{transform: translate(-40%);}
+}
+
+.page3_earlytit{
+	width: 25%;
+	height: 5%;
+	top: 10%;
+	left: 0;
+	display: none;
+}
+
+.page3_lBtit{
+	width: 35%;
+	height: 5%;
+	top: 18%;
+	left: 0;
+	display: none;
+}
+
+.page3_myTSpace{
+	width: 35%;
+	height: 40%;
+	top: 20%;
+	left: 5%;
+	
+	display: none;
+}
+
+.page3_myTWhere{
+	width: 40%;
+	height: 10%;
+	bottom: 17%;
+	left: 15%;
+	
+	display: none;
+}
+
+.page3_myTWall{
+	width: 30%;
+	height: 70%;
+	bottom: 0;
+	right: 0;
+	
+	display: none;
+}
+
+.page3_myTAvatar{
+	width: 15;
+	height: 15%;
+	top: 19.5%;
+	right: 13.5%;
+	z-index: 99;
+	
+	display: none;
+}
+
+/***************page4**********************/
+.page4 img{
+	position: absolute;
+}
+
+.page4_ofB{
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+}
+
+.page4_lO{
+	height: 70%;
+	bottom: 0;
+	left: 10%;
+	z-index: 99;
+}
+
+.page4_tit{
+	width: 30%;
+	top: 20%;
+	right: 0;
+}
+
+.page4_gui{
+	width: 50%;
+	top: 38%;
+	left: 30%;
+	animation: page1_scale 1s infinite;
+}
+
+.page4_onB{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.page4_tit1{
+	width: 50%;
+	top: 30%;
+	left: 25%;
+	display: none;
+}
+
+/***************arrow**********************/
+.arrow{
+	position: absolute;
+	width: 15%;
+	bottom: 5%;
+	left: 42.5%;
+	z-index: 99;
+	animation: upanddown 1s infinite;
+}
+
+@keyframes upanddown{
+	0%{}
+	50%{bottom:8%}
+	100%{}
+}
+
+/**************music**********************/
+.playMusic{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	
+}
+.musicRotate{
+	animation: music_rotate 1s infinite linear;
+}
+
+@keyframes music_rotate{
+	from{}
+	to{transform: rotate(360deg);}
+}
